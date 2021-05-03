@@ -1,0 +1,74 @@
+﻿@page
+@model Adoptex.Pages.DoAdopcji.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2 class="text-warning">Szczegóły</h2>
+<br />
+<div class=" border  backgroundWhite">
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Animal_Info.Imie"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="Animal_Info.Imie"disabled class="form-control" />
+        </div>
+      
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Animal_Info.Wiek"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="Animal_Info.Wiek" disabled class="form-control" />
+        </div>
+       
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Animal_Info.Opis"></label>
+        </div>
+        <div class="col-5">
+            <textarea asp-for="Animal_Info.Opis" rows="5" disabled class="form-control"> </textarea>
+        </div>
+       
+    </div>
+
+    <div class="form-group row">
+    </div>
+    <div class="form-group row">
+    </div>
+    <div class="form-group row">
+
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Animal_Info.Telefon"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="Animal_Info.Telefon" disabled class="form-control" />
+        </div>
+       
+    </div>
+    <div class="form-group row">
+        <div class="col-5 offset-2">
+            <div class="row">
+                <div class="col-6">
+                    <a asp-page="Edit" asp-route-id="@Model.Animal_Info.Id" class="btn btn-info form-control">Edytuj</a>
+                </div>
+                <div class="col-6">
+                    <a asp-page="Index" class="btn btn-success form-control">Powrót</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,76 @@
+﻿@page
+@model Adoptex.Pages.DoAdopcji.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2 class="text-warning">Edytuj</h2>
+<br />
+<form method="post">
+    <div class="border backgroundWhite">
+        <input type="hidden" asp-for="Animal_Info.Id" />
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Animal_Info.Imie"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Animal_Info.Imie" class="form-control" />
+            </div>
+            <span asp-validation-for="Animal_Info.Imie" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Animal_Info.Wiek"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Animal_Info.Wiek" class="form-control" />
+            </div>
+            <span asp-validation-for="Animal_Info.Wiek" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Animal_Info.Opis"></label>
+            </div>
+            <div class="col-5">
+                <textarea asp-for="Animal_Info.Opis" rows="5" class="form-control"> </textarea>
+            </div>
+            <span asp-validation-for="Animal_Info.Opis" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+        </div>
+        <div class="form-group row">
+        </div>
+        <div class="form-group row">
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Animal_Info.Telefon"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Animal_Info.Telefon" class="form-control" />
+            </div>
+            <span asp-validation-for="Animal_Info.Telefon" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col-5 offset-2">
+                <partial name="_EditAndBackToListButton" />
+            </div>
+        </div>
+
+    </div>
+
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
